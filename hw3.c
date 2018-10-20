@@ -38,6 +38,8 @@ shell(){
             exit(0);
             return 0;
          }
+         
+        pid = fork();
         if (!(pid = fork())){
             for (i = 0; argsarray[i] != '\0'; i++){
                 if (!strcmp(argsarray[i], ";")){
